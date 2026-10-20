@@ -1,0 +1,962 @@
+!DOCTYPE html
+html lang=ru class=no-js
+head
+meta charset=UTF-8
+meta name=viewport content=width=device-width, initial-scale=1
+titleESCALA — студия дизайна интерьера · Казаньtitle
+meta name=description content=ESCALA — авторская студия дизайна интерьера. Жилые и общественные пространства. Казань · Москва · Санкт-Петербург.
+!--
+  СТРУКТУРА ДЛЯ МНОГОСТРАНИЧНОСТИ (следующий шаг)
+  index.html (эта страница) → about.html (О студииПроцесс) → residential.html → public.html → services.html → case.html → contacts.html
+  ФАЙЛЫ ОБЛОЖЕК (локально) assetscover-01.jpg ... assetscover-04.jpg, assetslogo.png
+  В ПРЕВЬЮ ЧАТА перетащите файлы рендеров прямо на обложки проектов,
+  а файл логотипа — на знак в шапке. Превью обновится мгновенно.
+--
+link rel=stylesheet media=print onload=this.media='all' href=httpscdn.jsdelivr.netnpm@fontsource-variablemanropeindex.css
+script
+document.documentElement.className='';
+window.onerror=function(m,s,l){var p=document.getElementById('pre');if(p)p.classList.add('done');document.body&&document.body.classList.add('loaded');};
+setTimeout(function(){var p=document.getElementById('pre');if(p)p.classList.add('done');document.body&&document.body.classList.add('loaded');},3500);
+script
+style
+root{
+  --bg#25221F;--deep#1B1815;--soft#2C2825;
+  --fg#D8C6BB;--strong#EDE3DB;--dimrgba(216,198,187,.6);--faintrgba(216,198,187,.35);
+  --sand#C6AE94;--glow#E0B784;--logo#CBB9AD;
+  --linergba(216,198,187,.13);--line2rgba(198,174,148,.32);
+  --sans'Manrope Variable','Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --padclamp(20px,4.5vw,64px);--ecubic-bezier(.16,1,.3,1);
+}
+,before,after{box-sizingborder-box}
+html{scroll-behaviorsmooth}
+body{margin0;backgroundvar(--bg);colorvar(--fg);font-familyvar(--sans);font-weight300;font-size16px;line-height1.65;overflow-xhidden;-webkit-font-smoothingantialiased}
+body.locked{overflowhidden}
+a{colorinherit;text-decorationnone}
+button{fontinherit;colorinherit;backgroundnone;border0;cursorpointer}
+h1,h2,h3,h4{font-familyvar(--sans);margin0;line-height1.05;font-weight800;text-transformuppercase;letter-spacing.02em}
+p{margin0}ul{margin0;padding0;list-stylenone}
+img,svg{displayblock;max-width100%}
+selection{backgroundvar(--sand);color#1B1815}
+.grain{positionfixed;inset0;z-index9990;pointer-eventsnone;opacity.045;background-imageurl(dataimagesvg+xml;utf8,svg xmlns='httpwww.w3.org2000svg' width='180' height='180'filter id='n'feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'filterrect width='180' height='180' filter='url(%23n)'svg)}
+.wrap{max-width1500px;margin0 auto;padding0 var(--pad)}
+.lab{font-size10px;font-weight500;letter-spacing.3em;text-transformuppercase;colorvar(--sand)}
+.art{positionrelative;background
+  radial-gradient(85% 65% at 72% 16%,rgba(224,183,132,.2),transparent 62%),
+  linear-gradient(200deg,#4A4034 0%,#2A2520 46%,#161310 100%);overflowhidden}
+.art svg{positionabsolute;inset0;width100%;height100%}
+.artimg.fill{positionabsolute;inset0;width100%;height100%;object-fitcover}
+
+ preloader 
+.pre{positionfixed;inset0;z-index10000;backgroundvar(--deep);displaygrid;place-itemscenter;transitionopacity .8s var(--e),visibility .8s}
+.pre.done{opacity0;visibilityhidden}
+.pre-in{displayflex;flex-directioncolumn;align-itemscenter;gap20px}
+.pre-w{font-sizeclamp(1.6rem,6vw,3rem);font-weight200;letter-spacing.5em;text-indent.5em;colorvar(--logo)}
+.pre-b{widthmin(200px,48vw);height1px;backgroundrgba(216,198,187,.16);positionrelative}
+.pre-b i{positionabsolute;inset0;backgroundvar(--sand);transformscaleX(0);transform-originleft;transitiontransform .2s linear}
+
+ header 
+.nav{positionfixed;top0;left0;right0;z-index8000;displaygrid;grid-template-columns1fr auto 1fr;align-itemscenter;gap16px;paddingclamp(12px,1.6vw,20px) var(--pad);transitionbackground .5s,padding .5s,border-color .5s;border-bottom1px solid transparent}
+.nav.stuck{backgroundrgba(27,24,21,.94);border-bottom-colorvar(--line);padding-top9px;padding-bottom9px}
+.nav-l{displayflex;align-itemscenter;gapclamp(14px,2vw,30px)}
+.nav-l a{positionrelative;font-size11px;font-weight500;letter-spacing.16em;text-transformuppercase;colorvar(--dim);padding6px 0;transitioncolor .4s;white-spacenowrap}
+.nav-l aafter{content'';positionabsolute;left0;bottom0;height1px;width100%;backgroundvar(--sand);transformscaleX(0);transform-originright;transitiontransform .5s var(--e)}
+.nav-l ahover{colorvar(--strong)}
+.nav-l ahoverafter{transformscaleX(1);transform-originleft}
+ логотип по центру, без нижней подписи (обрезка рамкой) 
+.logo-slot{justify-selfcenter;positionrelative;displayblock;heightclamp(24px,2.9vw,36px);aspect-ratio5.61;overflowhidden;border1px dashed transparent;transitionborder-color .4s}
+.logo-slot img{positionabsolute;left0;top0;width100%;heightauto;displaynone}
+.logo-slot.has-logo img{displayblock}
+.logo-slot.has-logo .logo-wm{displaynone}
+.logo-wm{displayflex;align-itemscenter;height100%;font-sizeclamp(14px,2vw,24px);font-weight300;letter-spacing.5em;text-indent.5em;colorvar(--logo);white-spacenowrap}
+.logo-slot.drag{border-colorvar(--line2)}
+.nav-r{displayflex;align-itemscenter;justify-contentflex-end;gapclamp(10px,1.4vw,18px)}
+.socs{displayflex;align-itemscenter;gapclamp(8px,1vw,14px)}
+.socs a{displaygrid;place-itemscenter;width30px;height30px;border1px solid var(--line);border-radius50%;colorvar(--dim);transition.4s}
+.socs ahover{color#1B1815;backgroundvar(--sand);border-colorvar(--sand);transformtranslateY(-2px)}
+.socs svg{width13px;height13px;fillcurrentColor}
+.btn{positionrelative;displayinline-flex;align-itemscenter;justify-contentcenter;gap10px;padding12px 24px;border1px solid var(--line2);border-radius100px;font-size11px;font-weight600;letter-spacing.16em;text-transformuppercase;overflowhidden;transitioncolor .5s,border-color .5s;white-spacenowrap}
+.btn span{positionrelative;z-index2}
+.btnbefore{content'';positionabsolute;inset0;backgroundvar(--sand);transformtranslateY(101%);transitiontransform .6s var(--e)}
+.btnhover{color#1B1815;border-colorvar(--sand)}
+.btnhoverbefore{transformtranslateY(0)}
+.btn.solid{backgroundvar(--sand);color#1B1815;border-colorvar(--sand)}
+.btn.solidbefore{backgroundvar(--strong)}
+.btn.icon{padding0;width40px;height40px;displaynone}
+.burger{width42px;height42px;positionrelative;flex0 0 auto}
+.burger i{positionabsolute;left10px;width22px;height1.5px;backgroundvar(--fg);transition.45s var(--e)}
+.burger inth-child(1){top16px}.burger inth-child(2){top22px}.burger inth-child(3){top28px;width14px}
+.burger.open inth-child(1){top22px;transformrotate(45deg)}
+.burger.open inth-child(2){opacity0}
+.burger.open inth-child(3){top22px;width22px;transformrotate(-45deg)}
+
+ drawer 
+.drawer{positionfixed;top0;right0;bottom0;widthmin(440px,92vw);z-index8500;backgroundvar(--deep);border-left1px solid var(--line);transformtranslateX(102%);transitiontransform .8s var(--e);overflow-yauto;padding90px clamp(24px,4vw,44px) 40px}
+.drawer.open{transformnone}
+.drawer nav{displaygrid;gap2px;border-bottom1px solid var(--line);padding-bottom22px}
+.drawer nav a{font-sizeclamp(1.3rem,4.6vw,1.7rem);font-weight700;text-transformuppercase;letter-spacing.04em;colorvar(--strong);padding9px 0;displayflex;justify-contentspace-between;align-itemscenter;transitioncolor .3s,padding-left .4s var(--e)}
+.drawer nav ahover{colorvar(--sand);padding-left10px}
+.drawer nav a small{font-size10px;font-weight500;letter-spacing.2em;colorvar(--faint)}
+.dr-block{padding24px 0;border-bottom1px solid var(--line)}
+.dr-block h4{font-size11px;font-weight600;letter-spacing.26em;colorvar(--sand);margin-bottom16px}
+.price{displayflex;justify-contentspace-between;gap16px;padding10px 0;border-bottom1px dashed var(--line);font-size13.5px}
+.pricelast-child{border-bottom0}
+.price b{font-weight500;colorvar(--strong);white-spacenowrap}
+.price span{colorvar(--dim)}
+.dr-socs{displayflex;gap10px;flex-wrapwrap;padding-top22px}
+.dr-socs a{padding10px 16px;border1px solid var(--line);border-radius100px;font-size10px;font-weight600;letter-spacing.14em;text-transformuppercase;colorvar(--dim);transition.4s}
+.dr-socs ahover{backgroundvar(--sand);color#1B1815;border-colorvar(--sand)}
+.dr-contact{padding-top22px;font-size13px;colorvar(--dim);displaygrid;gap6px}
+.dr-contact a{colorvar(--strong)}
+.scrim{positionfixed;inset0;z-index8400;backgroundrgba(15,13,12,.6);opacity0;visibilityhidden;transition.6s}
+.scrim.on{opacity1;visibilityvisible}
+
+ dots nav 
+.dots{positionfixed;rightclamp(10px,1.6vw,22px);top50%;transformtranslateY(-50%);z-index7000;displaygrid;gap12px}
+.dots button{width8px;height8px;border-radius50%;backgroundrgba(216,198,187,.25);positionrelative;transition.4s;padding0}
+.dots button.on{backgroundvar(--sand);box-shadow0 0 0 4px rgba(198,174,148,.15)}
+.dots buttonafter{contentattr(data-t);positionabsolute;right18px;top50%;transformtranslateY(-50%);font-size9px;letter-spacing.16em;text-transformuppercase;colorvar(--sand);opacity0;white-spacenowrap;transitionopacity .3s;pointer-eventsnone}
+.dots buttonhoverafter{opacity1}
+
+ hero 
+.hero{positionrelative;min-height100vh;displayflex;align-itemscenter;overflowhidden}
+.hero-bg{positionabsolute;inset0;z-index0}
+.hero-bg .kb{positionabsolute;inset-6%;animationkb 30s ease-in-out infinite alternate}
+@keyframes kb{from{transformscale(1.04) translate(1.2%,.8%)}to{transformscale(1.16) translate(-1.6%,-1.2%)}}
+.hero-veil{positionabsolute;inset0;z-index1;backgroundlinear-gradient(100deg,rgba(27,24,21,.92) 8%,rgba(27,24,21,.55) 46%,rgba(27,24,21,.18) 75%,rgba(27,24,21,.5)),linear-gradient(to top,rgba(37,34,31,.95),transparent 40%)}
+.sweep{positionabsolute;inset-20%;z-index2;pointer-eventsnone;backgroundlinear-gradient(115deg,transparent 42%,rgba(224,183,132,.09) 50%,transparent 58%);animationsweep 9s var(--e) infinite}
+@keyframes sweep{0%{transformtranslateX(-30%)}55%,100%{transformtranslateX(30%)}}
+.dust{positionabsolute;inset0;z-index2;pointer-eventsnone;overflowhidden}
+.dust i{positionabsolute;width3px;height3px;border-radius50%;backgroundrgba(240,214,178,.75);box-shadow0 0 8px rgba(240,214,178,.6);opacity0;animationdust linear infinite}
+@keyframes dust{0%{transformtranslate3d(0,20px,0);opacity0}12%{opacity.85}88%{opacity.5}100%{transformtranslate3d(var(--dx),-46vh,0);opacity0}}
+.hero-in{positionrelative;z-index3;width100%;padding120px var(--pad) 110px;max-width1500px;margin0 auto}
+.hero-frame{positionrelative;paddingclamp(22px,3vw,44px) clamp(22px,3.4vw,52px)}
+.hero-framebefore{content'';positionabsolute;left0;top0;widthclamp(40px,5vw,80px);heightclamp(40px,5vw,80px);border-left1px solid var(--line2);border-top1px solid var(--line2)}
+.hero-frameafter{content'';positionabsolute;right0;bottom0;widthclamp(40px,5vw,80px);heightclamp(40px,5vw,80px);border-right1px solid var(--line2);border-bottom1px solid var(--line2)}
+.hero h1{font-sizeclamp(2.4rem,7.2vw,6.4rem);font-weight800;line-height.98;letter-spacing.015em;colorvar(--strong);max-width12ch}
+.hero h1 .ln{displayblock;overflowhidden}
+.hero h1 .lnspan{displayblock;transformtranslateY(105%);transitiontransform 1.1s var(--e);transition-delayvar(--d,0s)}
+.loaded .hero h1 .lnspan{transformnone}
+.hero p.sub{margin-topclamp(18px,2.4vw,30px);max-width44ch;font-sizeclamp(14px,1.2vw,16.5px);colorvar(--dim);line-height1.75}
+.hero .hact{displayflex;gap14px;flex-wrapwrap;margin-topclamp(24px,3vw,40px)}
+.hero-bottom{positionabsolute;leftvar(--pad);rightvar(--pad);bottomclamp(18px,3vh,34px);z-index3;displayflex;align-itemscenter;justify-contentspace-between;gap20px}
+.hb-left{displayflex;align-itemscenter;gap14px}
+.hb-left .lab{colorvar(--faint)}
+.hb-right{font-sizeclamp(9px,1vw,12px);font-weight500;letter-spacing.5em;text-transformuppercase;colorvar(--dim)}
+.arrow-d{width44px;height44px;border-radius50%;backgroundvar(--strong);color#1B1815;displaygrid;place-itemscenter;transition.4s;animationbob 2.6s var(--e) infinite}
+.arrow-dhover{backgroundvar(--sand)}
+@keyframes bob{0%,100%{transformtranslateY(0)}50%{transformtranslateY(7px)}}
+
+ marquee 
+.mq{border-top1px solid var(--line);border-bottom1px solid var(--line);overflowhidden;padding14px 0;backgroundvar(--deep)}
+.mqt{displayflex;widthmax-content;animationmv 46s linear infinite}
+@keyframes mv{to{transformtranslateX(-50%)}}
+.mqt span{font-sizeclamp(11px,1.2vw,14px);font-weight500;letter-spacing.3em;text-transformuppercase;colorvar(--dim);padding0 clamp(16px,2.4vw,34px);displayinline-flex;align-itemscenter;gapclamp(16px,2.4vw,34px);white-spacenowrap}
+.mqt spanafter{content'◆';font-size.5em;colorvar(--trav,#B49B7F);opacity.7}
+
+ projects full-bleed 
+.pj-sec{border-bottom1px solid var(--line)}
+.pj-head{displayflex;align-itemsflex-end;justify-contentspace-between;gap24px;flex-wrapwrap;paddingclamp(56px,8vh,110px) 0 clamp(28px,4vw,54px)}
+.pj-head h2{font-sizeclamp(1.9rem,4.6vw,3.6rem);colorvar(--strong)}
+.pj-grid{displaygrid;grid-template-columns1fr 1fr;gap1px;backgroundvar(--line);border-top1px solid var(--line);border-bottom1px solid var(--line)}
+.pj{positionrelative;overflowhidden;heightclamp(420px,76vh,760px);cursorpointer;background#141210}
+.pj .sc{positionabsolute;inset0;will-changetransform}
+.pj .sc svg,.pj .sc img{width100%;height100%;object-fitcover;transitiontransform 1.4s var(--e),filter 1s}
+.pj .sc{filtersaturate(.9) brightness(.88)}
+.pjhover .sc{filtersaturate(1) brightness(1)}
+.pjhover .sc svg,.pjhover .sc img{transformscale(1.05)}
+.pjafter{content'';positionabsolute;inset0;backgroundlinear-gradient(to top,rgba(17,15,14,.9),rgba(17,15,14,.1) 46%,transparent 70%);pointer-eventsnone}
+.pj-num{positionabsolute;topclamp(16px,2vw,28px);leftclamp(16px,2vw,28px);z-index3;font-size11px;font-weight600;letter-spacing.24em;colorvar(--sand)}
+.pj-cap{positionabsolute;left0;right0;bottom0;z-index3;paddingclamp(20px,2.6vw,38px);displayflex;align-itemsflex-end;justify-contentspace-between;gap18px}
+.pj-cap h3{font-sizeclamp(1.15rem,2vw,1.8rem);font-weight700;letter-spacing.03em;colorvar(--strong);max-width22ch;transitioncolor .4s}
+.pjhover .pj-cap h3{colorvar(--sand)}
+.pj-cap .meta{font-size10.5px;font-weight500;letter-spacing.18em;text-transformuppercase;colorvar(--dim);margin-top8px}
+.pj-go{flex0 0 auto;width52px;height52px;border1px solid var(--line2);border-radius50%;displaygrid;place-itemscenter;colorvar(--strong);transition.5s var(--e);opacity0;transformtranslateY(10px)}
+.pjhover .pj-go{opacity1;transformnone;backgroundvar(--sand);color#1B1815;border-colorvar(--sand)}
+.pj-drop{positionabsolute;inset0;z-index5;displaynone;place-itemscenter;backgroundrgba(27,24,21,.8);border1px dashed var(--line2);font-size11px;letter-spacing.2em;text-transformuppercase;colorvar(--sand)}
+.pj.drag .pj-drop{displaygrid}
+
+ philosophy pinned комната наполняется 
+.phil{positionrelative;height340vh}
+.phil-stick{positionsticky;top0;height100vh;displaygrid;grid-template-columns1fr 1.1fr;gapclamp(24px,4vw,70px);align-itemscenter;padding90px var(--pad) 60px;max-width1500px;margin0 auto}
+.phil-txt h2{font-sizeclamp(1.7rem,3.6vw,3rem);colorvar(--strong);max-width14ch}
+.phil-txt .lead{margin-top20px;font-sizeclamp(14px,1.2vw,17px);colorvar(--dim);max-width40ch;line-height1.8}
+.principles{margin-topclamp(22px,3vh,40px);displaygrid;gap0;border-top1px solid var(--line)}
+.principles li{displayflex;gap16px;align-itemsbaseline;padding13px 0;border-bottom1px solid var(--line);font-size14px;colorvar(--faint);transitioncolor .5s,padding-left .5s var(--e)}
+.principles li b{font-size10px;font-weight600;letter-spacing.2em;colorvar(--faint);transitioncolor .5s}
+.principles li.on{colorvar(--fg);padding-left10px}
+.principles li.on b{colorvar(--sand)}
+.room-svg{width100%;heightauto;max-height74vh}
+.room-svg .ff{opacity0;transformtranslateY(30px);transitionopacity .9s var(--e),transform .9s var(--e)}
+.room-svg .ff.on{opacity1;transformnone}
+.no-js .room-svg .ff{opacity1;transformnone}
+.phil-prog{positionabsolute;leftvar(--pad);bottom26px;height1px;widthcalc(100% - var(--pad)2);backgroundvar(--line)}
+.phil-prog i{displayblock;height100%;backgroundvar(--sand);transformscaleX(0);transform-originleft}
+
+ angle shift pinned 
+.ang{positionrelative;height230vh}
+.ang-stick{positionsticky;top0;height100vh;overflowhidden}
+.ang-l{positionabsolute;inset0}
+.ang-l .kb{positionabsolute;inset-4%}
+.ang-b{clip-pathinset(0 0 0 100%)}
+.ang-cap{positionabsolute;left0;right0;bottomclamp(26px,6vh,64px);z-index4;text-aligncenter}
+.ang-cap h3{font-sizeclamp(1.5rem,4.4vw,3.4rem);colorvar(--strong)}
+.ang-cap .a,.ang-cap .b{transitionopacity .5s,transform .6s var(--e)}
+.ang-cap .b{positionabsolute;left0;right0;opacity0;transformtranslateY(14px)}
+.ang-veil{positionabsolute;inset0;backgroundlinear-gradient(to top,rgba(27,24,21,.85),transparent 45%)}
+
+ directions 
+.dirs2{displaygrid;grid-template-columns1fr 1fr;gap1px;backgroundvar(--line)}
+.dir2{positionrelative;heightclamp(360px,64vh,620px);overflowhidden;cursorpointer;background#141210}
+.dir2 .bg{positionabsolute;inset0;filterbrightness(.72) saturate(.85);transitiontransform 1.5s var(--e),filter .8s}
+.dir2hover .bg{transformscale(1.06);filterbrightness(.9) saturate(1)}
+.dir2 .in{positionabsolute;insetauto 0 0 0;paddingclamp(22px,3vw,44px);z-index3;backgroundlinear-gradient(to top,rgba(17,15,14,.9),transparent)}
+.dir2 h3{font-sizeclamp(1.4rem,3vw,2.5rem);colorvar(--strong)}
+.dir2 .cnt{font-size10.5px;font-weight500;letter-spacing.22em;text-transformuppercase;colorvar(--sand);margin-bottom10px;displayblock}
+.dir2 .ar{positionabsolute;topclamp(18px,2.4vw,32px);rightclamp(18px,2.4vw,32px);width50px;height50px;border1px solid var(--line2);border-radius50%;displaygrid;place-itemscenter;colorvar(--strong);transition.5s var(--e);z-index3}
+.dir2hover .ar{backgroundvar(--sand);color#1B1815;transformrotate(45deg)}
+
+ facts 
+.facts{displaygrid;grid-template-columnsrepeat(4,1fr);gap1px;backgroundvar(--line);border-bottom1px solid var(--line)}
+.fact{backgroundvar(--bg);paddingclamp(24px,3.4vw,44px) clamp(16px,2vw,30px);transitionbackground .5s}
+.facthover{backgroundvar(--soft)}
+.fact b{displayblock;font-sizeclamp(2.2rem,4.6vw,3.6rem);font-weight200;letter-spacing.02em;colorvar(--strong)}
+.fact span{displayblock;margin-top10px;font-size10px;font-weight500;letter-spacing.2em;text-transformuppercase;colorvar(--faint)}
+
+ process horizontal pinned 
+.phs{positionrelative;border-bottom1px solid var(--line)}
+.phs .stick{displayflex;align-itemscenter;overflowhidden;paddingclamp(50px,8vh,90px) 0}
+.phs .track{displayflex;gapclamp(16px,2vw,32px);padding0 var(--pad);will-changetransform}
+.phs.pin{height320vh}
+.phs.pin .stick{positionsticky;top0;height100vh;padding0}
+.pstep{flex0 0 clamp(280px,30vw,420px);border1px solid var(--line);backgroundvar(--soft);paddingclamp(22px,2.6vw,38px);displayflex;flex-directioncolumn;gap14px;min-heightclamp(300px,44vh,420px)}
+.pstep b{font-size11px;font-weight600;letter-spacing.24em;colorvar(--sand)}
+.pstep h3{font-sizeclamp(1.1rem,1.8vw,1.6rem);colorvar(--strong);letter-spacing.03em}
+.pstep p{font-size13.5px;colorvar(--dim);line-height1.75}
+.pstep ul{margin-topauto;displaygrid;gap7px;border-top1px solid var(--line);padding-top14px}
+.pstep li{font-size12px;colorvar(--dim);padding-left16px;positionrelative}
+.pstep libefore{content'';positionabsolute;left0;top.6em;width8px;height1px;backgroundvar(--trav,#B49B7F)}
+.pstep .dur{font-size10px;font-weight600;letter-spacing.18em;text-transformuppercase;colorvar(--sand);border1px solid var(--line2);border-radius100px;padding7px 14px;align-selfflex-start}
+.no-js .phs .track{flex-directioncolumn}
+.no-js .phs .stick{padding40px 0}
+
+ cta + form 
+.cta-sec{backgroundvar(--deep);border-top1px solid var(--line)}
+.cta-sec h2{font-sizeclamp(2rem,6.4vw,5rem);colorvar(--strong);max-width16ch}
+.cg{displaygrid;grid-template-columns1fr 1fr;gapclamp(36px,6vw,90px);margin-topclamp(36px,6vw,70px);align-itemsstart}
+.ci{padding18px 0;border-bottom1px solid var(--line);displayflex;justify-contentspace-between;gap16px;align-itemsbaseline}
+.cifirst-child{border-top1px solid var(--line)}
+.ci span{font-size9.5px;font-weight600;letter-spacing.2em;text-transformuppercase;colorvar(--faint)}
+.ci a,.ci p{font-sizeclamp(1rem,1.6vw,1.3rem);font-weight500;colorvar(--strong);text-alignright;transitioncolor .4s}
+.ci ahover{colorvar(--sand)}
+.form{displaygrid;gap24px}
+.fd{positionrelative}
+.fd input,.fd select,.fd textarea{width100%;backgroundtransparent;border0;border-bottom1px solid var(--line);padding18px 0 11px;font-familyvar(--sans);font-size15px;font-weight300;colorvar(--strong);outlinenone;border-radius0;transitionborder-color .5s}
+.fd textarea{resizevertical;min-height80px}
+.fd select{appearancenone;-webkit-appearancenone;cursorpointer;background-imageurl(dataimagesvg+xml;utf8,svg xmlns='httpwww.w3.org2000svg' width='12' height='8'path d='M1 1l5 5 5-5' fill='none' stroke='%23C6AE94' stroke-width='1.2'svg);background-repeatno-repeat;background-positionright 4px center}
+.fd select option{background#211E1B;color#D8C6BB}
+.fd label{positionabsolute;left0;top16px;font-size14px;colorvar(--faint);pointer-eventsnone;transitiontransform .5s var(--e),font-size .5s,color .4s}
+.fd.filled label,.fd inputfocus~label,.fd selectfocus~label,.fd textareafocus~label{transformtranslateY(-17px);font-size9.5px;font-weight600;letter-spacing.2em;text-transformuppercase;colorvar(--sand)}
+.fd inputfocus,.fd selectfocus,.fd textareafocus{border-bottom-colorvar(--sand)}
+.fd.err input,.fd.err select{border-bottom-color#C0705C}
+.cs{displayflex;gap13px;align-itemsflex-start;font-size12px;colorvar(--faint);line-height1.6;cursorpointer}
+.cs input{positionabsolute;opacity0}
+.cs .bx{flex0 0 auto;width18px;height18px;border1px solid var(--line2);margin-top2px;positionrelative;transition.4s}
+.cs .bxafter{content'';positionabsolute;left5px;top2px;width5px;height9px;bordersolid #1B1815;border-width0 1.4px 1.4px 0;transformrotate(45deg) scale(0);transitiontransform .35s var(--e)}
+.cs inputchecked~.bx{backgroundvar(--sand);border-colorvar(--sand)}
+.cs inputchecked~.bxafter{transformrotate(45deg) scale(1)}
+.fok{border1px solid var(--line2);paddingclamp(26px,4vw,44px);text-aligncenter;displaynone}
+.fok.show{displayblock}
+.fok h4{font-size1.4rem;colorvar(--strong);margin-bottom10px}
+.fok p{font-size14px;colorvar(--dim)}
+
+ footer 
+.foot{border-top1px solid var(--line);paddingclamp(30px,4vw,50px) 0;backgroundvar(--deep)}
+.foot-in{displayflex;align-itemscenter;justify-contentspace-between;gap24px;flex-wrapwrap}
+.foot-logo{font-sizeclamp(1.2rem,2.4vw,1.8rem);font-weight300;letter-spacing.5em;colorvar(--logo)}
+.foot-nav{displayflex;gapclamp(14px,2vw,28px);flex-wrapwrap}
+.foot-nav a{font-size10.5px;font-weight500;letter-spacing.16em;text-transformuppercase;colorvar(--dim);transitioncolor .4s}
+.foot-nav ahover{colorvar(--sand)}
+.foot-sub{displayflex;justify-contentspace-between;gap18px;flex-wrapwrap;margin-top26px;padding-top22px;border-top1px solid var(--line);font-size10px;font-weight500;letter-spacing.14em;text-transformuppercase;colorvar(--faint)}
+
+ reveal 
+.rv{opacity0;transformtranslateY(26px);transitionopacity 1s var(--e),transform 1s var(--e);transition-delayvar(--d,0s)}
+.rv.in{opacity1;transformnone}
+.no-js .rv{opacity1;transformnone}
+
+ hint chip 
+.hint{positionfixed;left16px;bottom16px;z-index9600;max-width280px;backgroundrgba(27,24,21,.94);border1px solid var(--line2);border-radius14px;padding12px 34px 12px 14px;font-size11px;line-height1.5;colorvar(--dim)}
+.hint b{colorvar(--sand);font-weight600}
+.hint button{positionabsolute;top6px;right8px;font-size14px;colorvar(--faint)}
+.hint.gone{displaynone}
+
+@media (max-width1080px){
+  .nav-l{displaynone}
+  .btn.icon{displayinline-flex}
+  .nav-r .btnnot(.icon){displaynone}
+  .nav-r .socs{displaynone}
+  .phil-stick{grid-template-columns1fr;align-contentcenter;gap20px}
+  .room-svg{max-height44vh}
+  .facts{grid-template-columnsrepeat(2,1fr)}
+  .cg{grid-template-columns1fr}
+  .dots{displaynone}
+}
+@media (max-width860px){
+  .pj-grid,.dirs2{grid-template-columns1fr}
+  .pj{heightclamp(380px,66vh,600px)}
+  .phs.pin{heightauto}
+  .phs.pin .stick{positionstatic;heightauto;padding40px 0}
+  .phs .track{flex-directioncolumn}
+  .pstep{flex0 0 auto;min-height0}
+  .ang{height160vh}
+}
+@media (max-width560px){
+  .hero-bottom{flex-directioncolumn;align-itemsflex-start;gap14px}
+  .hb-right{letter-spacing.3em}
+  .facts{grid-template-columns1fr 1fr}
+}
+@media (prefers-reduced-motionreduce){
+  {animation-duration.01ms!important;animation-iteration-count1!important;transition-duration.15s!important}
+  html{scroll-behaviorauto}.hero-bg .kb,.sweep,.dust i{animationnone}
+}
+style
+head
+body
+div class=graindiv
+
+div class=pre id=prediv class=pre-indiv class=pre-wESCALAdivdiv class=pre-bi id=pbidivdivdiv
+
+header class=nav id=nav
+  div class=nav-l
+    a href=#projects data-filter=жилыеЖилые интерьерыa
+    a href=#projects data-filter=общественныеОбщественные интерьерыa
+    a href=#services id=tabServicesУслугиa
+  div
+
+  !-- ЛОГОТИП перетащите файл logo.png на этот блок (или укажите data-src).
+       Нижняя подпись «ДИЗАЙН ИНТЕРЬЕРА» обрезается рамкой автоматически. --
+  a href=#top class=logo-slot id=logoSlot data-drop=logo aria-label=ESCALA — на главную
+    img id=logoImg data-src= alt=ESCALA
+    span class=logo-wmESCALAspan
+  a
+
+  div class=nav-r
+    div class=socs
+      a href=# aria-label=Telegramsvg viewBox=0 0 24 24path d=M21.9 4.6c.2-1-.7-1.6-1.6-1.3L3.1 9.8c-1 .4-1 1.8.1 2.1l4.4 1.4 1.7 5.2c.3.9 1.4 1.1 2 .4l2.4-2.5 4.5 3.3c.8.6 1.9.1 2.1-.9l1.6-14.2zM8.4 12.6l8.8-5.5c.4-.2.7.3.4.6l-7 6.6-.3 3-1.9-4.7zsvga
+      a href=# aria-label=WhatsAppsvg viewBox=0 0 24 24path d=M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 13.9c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3zsvga
+      a href=# aria-label=Instagramsvg viewBox=0 0 24 24path d=M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8C2.3 4 3.9 2.4 7.1 2.3c1.3-.1 1.7-.1 4.9-.1zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.4a1.4 1.4 0 1 0 0-2.9 1.4 1.4 0 0 0 0 2.9zsvga
+    div
+    a href=#contact class=btnspanОбсудить проектspana
+    a href=#contact class=btn icon aria-label=Связатьсяspan→spana
+    button class=burger id=burger aria-label=Меню aria-expanded=falseiiiiiibutton
+  div
+header
+
+div class=scrim id=scrimdiv
+aside class=drawer id=drawer
+  nav
+    a href=#projects data-filter=жилыеЖилые интерьеры small04smalla
+    a href=#projects data-filter=общественныеОбщественные small02smalla
+    a href=#aboutО студииa
+    a href=#processПроцессa
+    a href=#contactКонтактыa
+  nav
+  div class=dr-block id=services
+    h4Услуги и стоимостьh4
+    div class=pricespanЭкспресс-консультация, 90 минspanb15 000 ₽bdiv
+    div class=pricespanПланировочное решениеspanbот 1 500 ₽м²bdiv
+    div class=pricespanКонцепция + 3D-визуализацияspanbот 3 500 ₽м²bdiv
+    div class=pricespanПолный проект с альбомами чертежейspanbот 6 000 ₽м²bdiv
+    div class=pricespanКомплектация объектаspanbот 5% бюджетаbdiv
+    div class=pricespanАвторский надзорspanbот 30 000 ₽месbdiv
+  div
+  div class=dr-block
+    h4Социальные сетиh4
+    div class=dr-socs
+      a href=#Telegramaa href=#Instagramaa href=#YouTubea
+      a href=#VKaa href=#Pinterestaa href=#Behancea
+    div
+  div
+  div class=dr-contact
+    a href=mailtohello@escala.studiohello@escala.studioa
+    a href=tel+79170000000+7 (917) 000-00-00a
+    spanКазань · Москва · Санкт-Петербургspan
+  div
+aside
+
+div class=dots id=dots
+  button data-t=Главная data-g=#top class=onbutton
+  button data-t=Проекты data-g=#projectsbutton
+  button data-t=Философия data-g=#aboutbutton
+  button data-t=Направления data-g=#dirsbutton
+  button data-t=Процесс data-g=#processbutton
+  button data-t=Контакты data-g=#contactbutton
+div
+
+main id=top
+  !-- HERO --
+  section class=hero
+    div class=hero-bg art id=heroBgdiv class=kb id=heroKbdivdiv
+    div class=hero-veildiv
+    div class=sweepdiv
+    div class=dust id=dustdiv
+    div class=hero-in
+      div class=hero-frame
+        span class=labСтудия дизайна интерьера · Казань · с 2016span
+        h1 style=margin-top18px
+          span class=lnspanПространства,spanspan
+          span class=lnspan style=--d.12sв которыхspanspan
+          span class=lnspan style=--d.24sдышится легчеspanspan
+        h1
+        p class=subАвторский дизайн жилых и общественных интерьеров от планировки и света до последней ручки двери. Ведём проекты из Казани — для Москвы, Петербурга и любого города России.p
+        div class=hact
+          a href=#projects class=btn solidspanСмотреть проектыspana
+          a href=#contact class=btnspanОбсудить проектspana
+        div
+      div
+    div
+    div class=hero-bottom
+      div class=hb-left
+        span class=labМы на связиspan
+        div class=socs
+          a href=# aria-label=Telegramsvg viewBox=0 0 24 24path d=M21.9 4.6c.2-1-.7-1.6-1.6-1.3L3.1 9.8c-1 .4-1 1.8.1 2.1l4.4 1.4 1.7 5.2c.3.9 1.4 1.1 2 .4l2.4-2.5 4.5 3.3c.8.6 1.9.1 2.1-.9l1.6-14.2zM8.4 12.6l8.8-5.5c.4-.2.7.3.4.6l-7 6.6-.3 3-1.9-4.7zsvga
+          a href=# aria-label=WhatsAppsvg viewBox=0 0 24 24path d=M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 13.9c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3zsvga
+          a href=# aria-label=Instagramsvg viewBox=0 0 24 24path d=M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8C2.3 4 3.9 2.4 7.1 2.3c1.3-.1 1.7-.1 4.9-.1zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.4a1.4 1.4 0 1 0 0-2.9 1.4 1.4 0 0 0 0 2.9zsvga
+        div
+      div
+      a href=#projects class=arrow-d aria-label=Листать внизsvg width=14 height=14 viewBox=0 0 14 14path d=M7 1v11M2.5 8L7 12.5 11.5 8 fill=none stroke=currentColor stroke-width=1.6svga
+      div class=hb-rightСвет · Материал · Формаdiv
+    div
+  section
+
+  div class=mqdiv class=mqt id=mqt
+    spanЖилые интерьерыspanspanОбщественные пространстваspanspan3D-визуализацииspanspanРабочие чертежиspanspanКомплектацияspanspanАвторский надзорspan
+    spanЖилые интерьерыspanspanОбщественные пространстваspanspan3D-визуализацииspanspanРабочие чертежиspanspanКомплектацияspanspanАвторский надзорspan
+  divdiv
+
+  !-- PROJECTS обложки от края до края, по две в ряд --
+  section class=pj-sec id=projects
+    div class=wrap
+      div class=pj-head data-r
+        div
+          span class=labПортфолио — избранные проектыspan
+          h2 style=margin-top14pxРаботы, которыеbrговорят за насh2
+        div
+        p style=max-width36ch;font-size14px;colorvar(--dim)Каждый проект — сценарий жизни, переведённый на язык света, пропорций и материала. Наведите курсор — и пространство оживёт.p
+      div
+    div
+    div class=pj-grid id=pjGrid
+      article class=pj data-cat=жилые data-i=0 data-drop=cover-0 data-r
+        div class=sc data-px data-scene=kitchen data-pal=warmdiv
+        span class=pj-num01  Жилойspan
+        div class=pj-capdivh3Квартира с островом и латуньюh3div class=metaМосква · 2025 · 118 м²divdivspan class=pj-gosvg width=14 height=14 viewBox=0 0 14 14path d=M3 11L11 3M5 3h6v6 fill=none stroke=currentColor stroke-width=1.5svgspandiv
+        div class=pj-dropОтпустите рендер проектаdiv
+      article
+      article class=pj data-cat=жилые data-i=1 data-drop=cover-1 data-r
+        div class=sc data-px data-scene=bed data-pal=duskdiv
+        span class=pj-num02  Жилойspan
+        div class=pj-capdivh3Спальня в дубе и бронзеh3div class=metaКазань · 2025 · 96 м²divdivspan class=pj-gosvg width=14 height=14 viewBox=0 0 14 14path d=M3 11L11 3M5 3h6v6 fill=none stroke=currentColor stroke-width=1.5svgspandiv
+        div class=pj-dropОтпустите рендер проектаdiv
+      article
+      article class=pj data-cat=общественные data-i=2 data-drop=cover-2 data-r
+        div class=sc data-px data-scene=tables data-pal=cooldiv
+        span class=pj-num03  Общественныйspan
+        div class=pj-capdivh3Кухня-столовая с панорамойh3div class=metaСанкт-Петербург · 2024 · 142 м²divdivspan class=pj-gosvg width=14 height=14 viewBox=0 0 14 14path d=M3 11L11 3M5 3h6v6 fill=none stroke=currentColor stroke-width=1.5svgspandiv
+        div class=pj-dropОтпустите рендер проектаdiv
+      article
+      article class=pj data-cat=общественные data-i=3 data-drop=cover-3 data-r
+        div class=sc data-px data-scene=hall data-pal=stonediv
+        span class=pj-num04  Общественныйspan
+        div class=pj-capdivh3Прихожая с зеркальным порталомh3div class=metaЕкатеринбург · 2024 · 78 м²divdivspan class=pj-gosvg width=14 height=14 viewBox=0 0 14 14path d=M3 11L11 3M5 3h6v6 fill=none stroke=currentColor stroke-width=1.5svgspandiv
+        div class=pj-dropОтпустите рендер проектаdiv
+      article
+    div
+  section
+
+  !-- PHILOSOPHY комната наполняется при скролле --
+  section class=phil id=about
+    div class=phil-stick
+      div class=phil-txt
+        span class=labФилософия — 02span
+        h2 style=margin-top14pxПустота — это началоh2
+        p class=leadИнтерьер рождается не из декора, а из сценария жизни. Листайте — и комната соберётся сама сначала свет, потом мебель, потом детали. Ровно так мы работаем над каждым проектом.p
+        ul class=principles id=principles
+          li data-t=0.06b01b Планировка и маршруты — фундамент комфортаli
+          li data-t=0.24b02b Свет сценариями утро, день, вечер, праздникli
+          li data-t=0.42b03b Честные материалы, которые красиво стареютli
+          li data-t=0.60b04b Мебель по эскизам, а не «что было в наличии»li
+          li data-t=0.78b05b Детали и декор — последний штрих, а не основаli
+        ul
+      div
+      svg class=room-svg id=roomSvg viewBox=0 0 900 620 fill=none xmlns=httpwww.w3.org2000svg aria-hidden=true
+        g stroke=#C6AE94 stroke-opacity=.45 stroke-width=2
+          path d=M40 60V540M40 540H860M860 540V60
+          path d=M620 120h180v300h-180zpath d=M710 120v300M620 270h180
+        g
+        g class=ff data-s=0.06 stroke=#C6AE94 stroke-opacity=.7 stroke-width=2
+          path d=M150 540V310path d=M118 310h64l-12-46h-40z
+          circle cx=150 cy=300 r=46 fill=#E0B784 fill-opacity=.16 stroke=none
+        g
+        g class=ff data-s=0.24 stroke=#C6AE94 stroke-opacity=.7 stroke-width=2
+          ellipse cx=400 cy=556 rx=230 ry=24 stroke-opacity=.35
+        g
+        g class=ff data-s=0.42 stroke=#C6AE94 stroke-opacity=.8 stroke-width=2
+          rect x=240 y=440 width=300 height=86 rx=14
+          rect x=240 y=368 width=300 height=80 rx=14
+          rect x=268 y=386 width=110 height=62 rx=10 stroke-opacity=.5
+          rect x=402 y=386 width=110 height=62 rx=10 stroke-opacity=.5
+        g
+        g class=ff data-s=0.60 stroke=#C6AE94 stroke-opacity=.8 stroke-width=2
+          rect x=580 y=470 width=130 height=12 rx=4
+          path d=M596 482v52M694 482v52
+          ellipse cx=645 cy=462 rx=20 ry=8 stroke-opacity=.6
+          path d=M645 458c0-24-12-34-20-46M645 458c2-22 16-32 26-42 stroke-opacity=.6
+        g
+        g class=ff data-s=0.78 stroke=#C6AE94 stroke-opacity=.8 stroke-width=2
+          rect x=80 y=150 width=130 height=290
+          path d=M80 246h130M80 342h130M145 150v290 stroke-opacity=.5
+          circle cx=430 cy=200 r=58
+          circle cx=430 cy=200 r=72 stroke-opacity=.25
+          path d=M470 60v150 stroke-opacity=.6circle cx=470 cy=222 r=14 fill=#E0B784 fill-opacity=.5
+          path d=M800 540v-52M782 488h36l-6-30h-24z stroke-opacity=.7
+          path d=M800 458c-10-30-30-42-40-56M800 458c10-26 26-38 38-50 stroke-opacity=.6
+        g
+      svg
+    div
+    div class=phil-progi id=philProgidiv
+  section
+
+  !-- ANGLE SHIFT интерьер меняет ракурс при скролле --
+  section class=ang id=ang
+    div class=ang-stick
+      div class=ang-l art id=angAdiv class=kb id=angAKbdivdiv
+      div class=ang-l art ang-b id=angBdiv class=kb id=angBKbdivdiv
+      div class=ang-veildiv
+      div class=ang-cap
+        h3 class=a id=angCapAОдин интерьер —brразные состояния светаh3
+        h3 class=b id=angCapBЛистайте дальше —brракурс меняетсяh3
+      div
+    div
+  section
+
+  !-- DIRECTIONS --
+  section id=dirs
+    div class=dirs2
+      a class=dir2 href=#projects data-filter=жилые data-r
+        div class=bg art id=dirAdiv
+        span class=arsvg width=14 height=14 viewBox=0 0 14 14path d=M3 11L11 3M5 3h6v6 fill=none stroke=currentColor stroke-width=1.5svgspan
+        div class=inspan class=cnt04 проектаspanh3Жилые интерьерыh3div
+      a
+      a class=dir2 href=#projects data-filter=общественные data-r
+        div class=bg art id=dirBdiv
+        span class=arsvg width=14 height=14 viewBox=0 0 14 14path d=M3 11L11 3M5 3h6v6 fill=none stroke=currentColor stroke-width=1.5svgspan
+        div class=inspan class=cnt02 проектаspanh3Общественные интерьерыh3div
+      a
+    div
+  section
+
+  !-- FACTS --
+  div class=facts data-r
+    div class=factb data-c=99bspanлет частной практикиspandiv
+    div class=factb data-c=6464bspanреализованных проектаspandiv
+    div class=factb data-c=1212bspanгородов Россииspandiv
+    div class=factb data-c=9898bspan% клиентов по рекомендацииspandiv
+  div
+
+  !-- PROCESS horizontal pinned --
+  section class=phs id=process
+    div class=wrap style=padding-topclamp(50px,8vh,96px);padding-bottomclamp(20px,3vh,36px)
+      span class=lab data-rПроцесс — 03span
+      h2 style=font-sizeclamp(1.8rem,4.4vw,3.4rem);colorvar(--strong);margin-top14px data-rПять шагов до ключейh2
+    div
+    div class=stick
+      div class=track id=track
+        div class=pstepbШаг 01bh3Знакомство и брифh3pСозвон или встреча на объекте сценарий жизни, привычки, бюджет, сроки. Всё фиксируем в ТЗ.pulliБриф-анкетаliliОбмеры и фотофиксацияliliОриентировочная сметаliulspan class=dur1–2 неделиspandiv
+        div class=pstepbШаг 02bh3Планировочное решениеh3p2–3 варианта планировки с реальной расстановкой мебели. Эргономика и маршруты прежде всего.pulliВарианты планировкиliliПлан монтажадемонтажаliliСогласование перепланировкиliulspan class=dur2–3 неделиspandiv
+        div class=pstepbШаг 03bh3Концепция и 3Dh3pМудборды, палитра, свет. Фотореалистичные виды каждой комнаты — вы видите результат до ремонта.pulliМудборды и материалыlili3D-визуализацииlili2 итерации правокliulspan class=dur3–5 недельspandiv
+        div class=pstepbШаг 04bh3Альбомы чертежейh3pПолная рабочая документация развертки, узлы, электрика, свет, сантехника, ведомости. Понятно любой бригаде.pulliРазвертки стенliliИнженерные планыliliВедомости отделкиliulspan class=dur3–4 неделиspandiv
+        div class=pstepbШаг 05bh3Комплектация и надзорh3pСмета, закупки, контроль стройки и соответствия проекту. Надзор — на объекте или удалённо.pulliГрафик закупокliliСозвоны с прорабомliliФинальная декорацияliulspan class=durвесь срок ремонтаspandiv
+      div
+    div
+  section
+
+  !-- CTA --
+  section class=sec cta-sec id=contact style=paddingclamp(70px,11vh,140px) 0
+    div class=wrap
+      span class=lab data-rКонтакты — 04span
+      h2 data-r style=margin-top16pxДавайте обсудим ваше пространствоh2
+      div class=cg
+        div data-r
+          div class=cispanEmailspana href=mailtohello@escala.studiohello@escala.studioadiv
+          div class=cispanТелефонspana href=tel+79170000000+7 (917) 000-00-00adiv
+          div class=cispanСтудияspanpКазань, Россияpdiv
+          div class=cispanГеографияspanpМосква · СПб · вся Россияpdiv
+          div class=cispanОтветspanpв течение 24 часовpdiv
+          p style=margin-top26px;font-size13.5px;colorvar(--dim);max-width44ch;line-height1.8Напишите город, площадь и тип помещения — этого достаточно для бесплатного 30-минутного созвона и честной оценки сроков и бюджета.p
+        div
+        div data-r
+          form class=form id=form novalidate
+            div class=fdinput type=text id=fName placeholder= label for=fNameВаше имяlabeldiv
+            div class=fdinput type=tel id=fPhone placeholder= label for=fPhoneТелефонlabeldiv
+            div class=fdinput type=email id=fMail placeholder= label for=fMailEmaillabeldiv
+            div class=fd
+              select id=fType
+                option value= disabled selected hiddenoption
+                optionЖилой интерьер — квартираoption
+                optionЖилой интерьер — домoption
+                optionОбщественный интерьерoption
+                optionКонсультация  концепцияoption
+                optionКомплектация  надзорoption
+              select
+              label for=fTypeТип проектаlabel
+            div
+            label class=cs id=csinput type=checkbox id=fAgreespan class=bxspanspanСогласен(-на) на обработку персональных данныхspanlabel
+            button class=btn solid type=submit id=sb style=width100%;padding18pxspanОтправить заявкуspanbutton
+          form
+          div class=fok id=fokh4Заявка отправленаh4pСпасибо! Свяжусь с вами в течение 24 часов.pdiv
+        div
+      div
+    div
+  section
+main
+
+footer class=foot
+  div class=wrap
+    div class=foot-in
+      span class=foot-logoESCALAspan
+      nav class=foot-nav
+        a href=#projectsПроектыaa href=#aboutО студииaa href=#processПроцессa
+        a href=#services id=footServicesУслугиaa href=#contactКонтактыa
+      nav
+      div class=socs
+        a href=# aria-label=Telegramsvg viewBox=0 0 24 24path d=M21.9 4.6c.2-1-.7-1.6-1.6-1.3L3.1 9.8c-1 .4-1 1.8.1 2.1l4.4 1.4 1.7 5.2c.3.9 1.4 1.1 2 .4l2.4-2.5 4.5 3.3c.8.6 1.9.1 2.1-.9l1.6-14.2zM8.4 12.6l8.8-5.5c.4-.2.7.3.4.6l-7 6.6-.3 3-1.9-4.7zsvga
+        a href=# aria-label=WhatsAppsvg viewBox=0 0 24 24path d=M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 13.9c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3zsvga
+        a href=# aria-label=Instagramsvg viewBox=0 0 24 24path d=M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8C2.3 4 3.9 2.4 7.1 2.3c1.3-.1 1.7-.1 4.9-.1zm0 3.6a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.4a1.4 1.4 0 1 0 0-2.9 1.4 1.4 0 0 0 0 2.9zsvga
+      div
+    div
+    div class=foot-sub
+      span© 2026 ESCALA · Дизайн интерьера · Казаньspan
+      spanПолитика конфиденциальностиspan
+    div
+  div
+footer
+
+div class=hint id=hint
+  bПревьюb перетащите файлы ваших рендеров прямо на обложки проектов, а logo.png — на знак в шапке. Картинки подставятся мгновенно.
+  button id=hintX aria-label=Закрыть×button
+div
+
+script
+(function(){
+use strict;
+function $(s,c){return (cdocument).querySelector(s);}
+function $$(s,c){return Array.prototype.slice.call((cdocument).querySelectorAll(s));}
+function hidePre(){var p=$('#pre');if(p)p.classList.add('done');document.body.classList.add('loaded');}
+
+ ---------- палитры сцен ---------- 
+var P={
+ warm{wt'#352D24',wb'#1F1B16',ft'#23201A',fb'#131110',st'#4E3B2A',sb'#221A13',ac'#D8B487',gl'#FFD39B',wd'#42341F',fa'#4B4034',sn'#514739'},
+ dusk{wt'#3A3129',wb'#221D19',ft'#241F1B',fb'#161310',st'#7A583C',sb'#2A211B',ac'#C9A37A',gl'#F2CB98',wd'#3B3025',fa'#4C4238',sn'#4E453A'},
+ cool{wt'#2C2E31',wb'#1A1B1D',ft'#212224',fb'#121314',st'#3D4750',sb'#191D21',ac'#A9AFB4',gl'#DCE4EA',wd'#2E2B26',fa'#454849',sn'#43464A'},
+ stone{wt'#3D382F',wb'#232019',ft'#2A2621',fb'#15130F',st'#5B4A38',sb'#241D16',ac'#CDB392',gl'#FFDDAB',wd'#40331F',fa'#57503F',sn'#5A5044'},
+ sand{wt'#413930',wb'#262119',ft'#2C2620',fb'#171410',st'#8A6A48',sb'#332820',ac'#DCC2A0',gl'#FFE2B6',wd'#473A28',fa'#5B5145',sn'#615649'}
+};
+var un=0;function nid(){un++;return 'z'+un;}
+function R(x,y,w,h,f,op,rx){return 'rect x='+x+' y='+y+' width='+w+' height='+h+' fill='+f+''+(op!=null' opacity='+op+'''')+(rx' rx='+rx+'''')+'';}
+function L(x1,y1,x2,y2,c,w,op){return 'line x1='+x1+' y1='+y1+' x2='+x2+' y2='+y2+' stroke='+c+' stroke-width='+(w1)+' opacity='+(op==null1op)+'';}
+function C(cx,cy,r,f,op){return 'circle cx='+cx+' cy='+cy+' r='+r+' fill='+f+' opacity='+(op==null1op)+'';}
+function E(cx,cy,rx,ry,f,op){return 'ellipse cx='+cx+' cy='+cy+' rx='+rx+' ry='+ry+' fill='+f+' opacity='+(op==null1op)+'';}
+function D(d,f,op){return 'path d='+d+' fill='+f+' opacity='+(op==null1op)+'';}
+function S(d,c,w,op){return 'path d='+d+' fill=none stroke='+c+' stroke-width='+(w2)+' opacity='+(op==null1op)+'';}
+
+function scene(kind,pal){
+  try{
+    var u=nid(),p=P[pal]P.dusk,H=660,s='',i,x,y;
+    s+='defs'
+     +'linearGradient id='+u+'w x1=0 y1=0 x2=0 y2=1stop offset=0 stop-color='+p.wt+'stop offset=1 stop-color='+p.wb+'linearGradient'
+     +'linearGradient id='+u+'f x1=0 y1=0 x2=0 y2=1stop offset=0 stop-color='+p.ft+'stop offset=1 stop-color='+p.fb+'linearGradient'
+     +'linearGradient id='+u+'s x1=0 y1=0 x2=0 y2=1stop offset=0 stop-color='+p.st+'stop offset=1 stop-color='+p.sb+'linearGradient'
+     +'linearGradient id='+u+'b x1=0 y1=0 x2=.6 y2=1stop offset=0 stop-color='+p.gl+' stop-opacity=.18stop offset=1 stop-color='+p.gl+' stop-opacity=0linearGradient'
+     +'radialGradient id='+u+'gstop offset=0 stop-color='+p.gl+' stop-opacity=.85stop offset=1 stop-color='+p.gl+' stop-opacity=0radialGradient'
+     +'radialGradient id='+u+'v cx=.5 cy=.46 r=.8stop offset=.5 stop-color=#000 stop-opacity=0stop offset=1 stop-color=#000 stop-opacity=.8radialGradient'
+     +'defs';
+    s+=R(0,0,1600,H,'url(#'+u+'w)')+R(0,H,1600,240,'url(#'+u+'f)');
+    for(i=0;i4;i++)s+=L(320+i230,H,-180+i430,900,p.ac,1,.05);
+    if(kind==='kitchen'){
+      s+=R(0,78,400,564,p.wd);
+      for(i=0;i4;i++)s+=L(i100+100,80,i100+100,642,p.wb,5,.75)+R(i100+84,330,4,88,p.ac,.45);
+      s+=R(900,118,600,180,p.sn,.72);
+      for(i=0;i6;i++)s+=L(902+i100,120,902+i100,298,p.wb,4,.7);
+      s+=R(900,452,600,26,p.sn)+R(900,478,600,164,p.wd,.9)+R(900,330,600,96,p.wb,.55);
+      s+=E(740,700,330,26,'#000',.3)+R(470,466,540,30,p.sn,1,4)+R(488,496,504,180,p.wt,.92)+L(740,496,740,676,p.wb,4,.7);
+      for(i=0;i3;i++){x=580+i150;s+=L(x,0,x,300,p.ac,2,.46)+C(x,316,86,'url(#'+u+'g)',.34)+D('M'+(x-30)+' 336 L'+(x+30)+' 336 L'+(x+16)+' 292 L'+(x-16)+' 292 Z',p.gl,.45);}
+      s+=E(620,462,34,10,p.ac,.34)+S('M620 458 C620 420 600 402 586 380 M620 458 C622 424 644 406 660 388',p.ac,2,.42);
+      s+=E(1240,720,200,34,p.sn,.9)+R(1228,720,24,120,p.sn,.8);
+      for(i=0;i3;i++)s+=S('M'+(1090+i110)+' 700 L'+(1090+i110)+' 640 q34 -22 68 0 L'+(1158+i110)+' 700',p.wd,7,.8);
+      s+=D('M1000 642 L1500 642 L1600 900 L820 900 Z','url(#'+u+'b)',.6);
+    }else if(kind==='bed'){
+      s+=D('M620 500 L620 300 A180 180 0 0 1 980 300 L980 500 Z',p.wb,.85);
+      s+=E(800,410,210,160,'url(#'+u+'g)',.4)+E(800,414,24,38,p.gl,.5);
+      s+=R(556,428,488,176,p.wd,1,10);
+      for(i=0;i6;i++)s+=L(600+i80,440,600+i80,600,p.wb,3,.55);
+      s+=E(800,694,360,26,'#000',.35)+R(498,600,604,66,p.fa,.8,8)+R(488,556,624,56,p.fa,1,14);
+      s+=D('M488 604 Q800 574 1112 604 L1112 668 L488 668 Z',p.ac,.16);
+      s+=R(596,498,176,72,p.ac,.28,24)+R(822,498,176,72,p.ac,.2,24);
+      s+=C(430,428,116,'url(#'+u+'g)',.42)+L(430,0,430,412,p.ac,2,.5)+C(430,424,15,p.gl,.75);
+      s+=C(1170,428,116,'url(#'+u+'g)',.42)+L(1170,0,1170,412,p.ac,2,.5)+C(1170,424,15,p.gl,.75);
+      s+=R(580,716,470,26,p.wd,1,7);
+      for(i=0;i8;i++){x=1270+i42;s+=D('M'+x+' 0 C '+(x-16)+' 230, '+(x+18)+' 470, '+(x-6)+' 706 L'+(x+34)+' 706 C '+(x+52)+' 470, '+(x+22)+' 230, '+(x+36)+' 0 Z',p.fa,(0.5-i0.04).toFixed(2));}
+    }else if(kind==='tables'){
+      s+=R(990,90,530,570,'url(#'+u+'s)')+E(1255,606,330,128,'url(#'+u+'g)',.35);
+      s+=L(1166,90,1166,660,'#141110',10,.9)+L(1340,90,1340,660,'#141110',10,.9);
+      s+=R(0,78,420,420,p.wb,.8);
+      for(i=0;i4;i++)s+=R(20+i104,98,92,120,p.wd,.7);
+      s+=R(60,600,900,86,p.fa,1,12);
+      for(i=0;i8;i++)s+=L(100+i106,606,100+i106,682,p.wb,4,.5);
+      var pts=[[380,180],[470,240],[560,160]];
+      for(i=0;i3;i++)s+=L(pts[i][0],0,pts[i][0],pts[i][1],p.ac,2,.45)+C(pts[i][0],pts[i][1]+18,12,p.gl,.8)+C(pts[i][0],pts[i][1]+18,80,'url(#'+u+'g)',.3);
+      for(i=0;i2;i++){var cx=330+i420;
+        s+=E(cx,752,120,28,p.sn)+R(cx-10,752,20,96,p.sn,.85)+E(cx,852,70,13,p.sn,.7);
+        s+=C(cx,742,10,p.gl,.7)+C(cx,742,54,'url(#'+u+'g)',.26);
+        s+=S('M'+(cx-180)+' 786 L'+(cx-180)+' 706 q38 -24 76 0 L'+(cx-104)+' 786',p.wd,8,.85);
+        s+=S('M'+(cx+104)+' 786 L'+(cx+104)+' 706 q38 -24 76 0 L'+(cx+180)+' 786',p.wd,8,.85);}
+      s+=D('M990 662 L1520 662 L1600 900 L820 900 Z','url(#'+u+'b)',.6);
+    }else if(kind==='hall'){
+      s+=C(760,330,250,p.wb,.9);
+      s+=C(760,330,268,'url(#'+u+'g)',.5);
+      s+='circle cx=760 cy=330 r=250 fill=none stroke='+p.gl+' stroke-width=6 opacity=.8';
+      s+=R(640,180,90,330,p.wd,.8)+R(740,150,120,360,p.fa,.6)+R(700,330,180,26,p.wd,.9);
+      s+=S('M880 210 C900 260 890 300 900 330',p.ac,2,.5);
+      s+=R(560,600,300,60,p.fa,1,26)+R(580,660,40,60,p.fa,.8)+R(800,660,40,60,p.fa,.8);
+      s+=D('M620 600 q60 -30 130 -10 l-20 40 q-60 14 -110 -6 Z',p.ac,.25);
+      s+=R(0,704,1600,196,'url(#'+u+'f)');
+      for(i=1;i5;i++)s+=L(i320,704,i320,900,'#141109',2,.35);
+      s+=E(760,830,340,40,p.gl,.06);
+    }else{
+      s+=R(990,90,530,570,'url(#'+u+'s)')+E(1255,606,330,128,'url(#'+u+'g)',.4);
+      s+=L(1166,90,1166,660,'#141110',10,.9)+L(1340,90,1340,660,'#141110',10,.9);
+      for(i=0;i12;i++){x=80+i30;s+=R(x,70,15,590,p.wd,i%2.85.55);}
+      s+=D('M168 772 L922 772 L1010 892 L58 892 Z',p.ac,.05);
+      s+=R(196,486,562,122,p.fa,1,14)+R(232,576,498,88,p.fa,.72,12);
+      s+=R(174,514,46,152,p.fa,1,17)+R(738,514,46,152,p.fa,1,17);
+      s+=R(430,712,272,15,p.sn,1,7)+L(462,727,462,792,p.sn,7)+L(672,727,672,792,p.sn,7);
+      s+=C(900,392,150,'url(#'+u+'g)',.42)+L(900,666,900,422,p.ac,4,.6)+D('M860 422 L940 422 L926 364 L874 364 Z',p.gl,.5);
+      s+=D('M990 662 L1520 662 L1600 900 L640 900 Z','url(#'+u+'b)');
+    }
+    s+='rect width=1600 height=900 fill=url(#'+u+'v)';
+    return 'svg viewBox=0 0 1600 900 preserveAspectRatio=xMidYMid slice xmlns=httpwww.w3.org2000svg aria-hidden=true'+s+'svg';
+  }catch(e){return '';}
+}
+
+function boot(){
+   сцены 
+  $('#heroKb').innerHTML=scene('kitchen','sand');
+  $$('.pj .sc').forEach(function(el){ el.innerHTML=scene(el.dataset.scene,el.dataset.pal); });
+  $('#angAKb').innerHTML=scene('tables','cool');
+  $('#angBKb').innerHTML=scene('kitchen','warm');
+  $('#dirA').innerHTML=scene('bed','dusk');
+  $('#dirB').innerHTML=scene('hall','stone');
+
+   пыль в луче света 
+  var dust=$('#dust'),i;
+  for(i=0;i16;i++){
+    var d=document.createElement('i');
+    d.style.left=(8+Math.random()84)+'%';
+    d.style.top=(30+Math.random()60)+'%';
+    d.style.setProperty('--dx',(Math.random()120-60)+'px');
+    d.style.animationDuration=(7+Math.random()9)+'s';
+    d.style.animationDelay=(-Math.random()12)+'s';
+    d.style.opacity='0';
+    dust.appendChild(d);
+  }
+
+   reveal 
+  var revs=$$('[data-r]');
+  revs.forEach(function(el){el.classList.add('rv');});
+  function showAll(){revs.forEach(function(el){el.classList.add('in');});}
+  setTimeout(showAll,3200);
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold.1,rootMargin'0px 0px -5% 0px'});
+    revs.forEach(function(el){io.observe(el);});
+  } else showAll();
+
+   scroll-движок параллакс, комната, ракурс, горизонтальный процесс, прогресс 
+  var pxEls=$$('[data-px]');
+  var phil=$('.phil'),philProg=$('#philProg'),ffs=$$('#roomSvg .ff'),prs=$$('#principles li');
+  var ang=$('.ang'),angB=$('#angB'),capA=$('#angCapA'),capB=$('#angCapB'),angAKb=$('#angAKb');
+  var phs=$('.phs'),track=$('#track'),pinOn=window.innerWidth860;
+  if(pinOn)phs.classList.add('pin');
+  var nav=$('#nav');
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var y=window.pageYOffsetdocument.documentElement.scrollTop,vh=window.innerHeight;
+    nav.classList.toggle('stuck',y40);
+    pxEls.forEach(function(el){
+      var r=el.parentNode.getBoundingClientRect();
+      if(r.bottom-200r.topvh+200)return;
+      var k=(r.top+r.height2-vh2)-0.07;
+      el.style.transform='translate3d(0,'+k.toFixed(1)+'px,0) scale(1.14)';
+    });
+    if(phil){
+      var pr=phil.getBoundingClientRect(),tot=phil.offsetHeight-vh;
+      var p=Math.min(1,Math.max(0,-pr.toptot));
+      if(philProg)philProg.style.transform='scaleX('+p+')';
+      ffs.forEach(function(g){g.classList.toggle('on',p=parseFloat(g.dataset.s));});
+      prs.forEach(function(li){li.classList.toggle('on',p=parseFloat(li.dataset.t));});
+    }
+    if(ang){
+      var ar=ang.getBoundingClientRect(),atot=ang.offsetHeight-vh;
+      var ap=Math.min(1,Math.max(0,-ar.topatot));
+      angB.style.clipPath='inset(0 0 0 '+((1-ap)100).toFixed(1)+'%)';
+      angAKb.style.transform='scale('+(1+ap0.1).toFixed(3)+')';
+      capA.style.opacity=ap.510;capA.style.transform=ap.5'none''translateY(-12px)';
+      capB.style.opacity=ap=.510;capB.style.transform=ap=.5'none''translateY(14px)';
+    }
+    if(pinOn&&phs.classList.contains('pin')){
+      var hr=phs.getBoundingClientRect(),htot=phs.offsetHeight-vh;
+      var hp=Math.min(1,Math.max(0,-hr.tophtot));
+      var max=Math.max(0,track.scrollWidth-window.innerWidth);
+      track.style.transform='translate3d('+(-hpmax).toFixed(1)+'px,0,0)';
+    }
+  }
+  function onScroll(){ if(!ticking){ ticking=true; requestAnimationFrame(frame); } }
+  window.addEventListener('scroll',onScroll,{passivetrue});
+  window.addEventListener('resize',function(){ pinOn=window.innerWidth860; phs.classList.toggle('pin',pinOn); onScroll(); });
+  frame();
+
+   dots nav 
+  var dots=$$('#dots button');
+  dots.forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=document.querySelector(b.dataset.g);
+      if(t)window.scrollTo({topt.getBoundingClientRect().top+y0()-10,behavior'smooth'});
+    });
+  });
+  function y0(){return window.pageYOffsetdocument.documentElement.scrollTop;}
+  if('IntersectionObserver' in window){
+    var secs=['#top','#projects','#about','#dirs','#process','#contact'].map(function(s){return document.querySelector(s);});
+    var dio=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(!e.isIntersecting)return;
+        var idx=secs.indexOf(e.target);
+        dots.forEach(function(b,k){b.classList.toggle('on',k===idx);});
+      });
+    },{threshold.4});
+    secs.forEach(function(s){if(s)dio.observe(s);});
+  }
+
+   счётчики 
+  if('IntersectionObserver' in window){
+    var cio=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var el=e.target,to=parseInt(el.dataset.c,10),t0=performance.now();
+      (function tick(t){var k=Math.min(1,(t-t0)1500);el.textContent=Math.round(to(1-Math.pow(1-k,3)));if(k1)requestAnimationFrame(tick);})(t0);
+      cio.unobserve(el);});},{threshold.6});
+    $$('[data-c]').forEach(function(el){cio.observe(el);});
+  }
+
+   drawer 
+  var drawer=$('#drawer'),scrim=$('#scrim'),burger=$('#burger');
+  function dr(open){
+    drawer.classList.toggle('open',open);scrim.classList.toggle('on',open);
+    burger.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);
+    document.body.classList.toggle('locked',open);
+  }
+  burger.addEventListener('click',function(){dr(!drawer.classList.contains('open'));});
+  scrim.addEventListener('click',function(){dr(false);});
+  function openServices(e){e.preventDefault();dr(true);setTimeout(function(){var s=$('#services');if(s)s.scrollIntoView({block'start'});},450);}
+  $('#tabServices').addEventListener('click',openServices);
+  $('#footServices').addEventListener('click',openServices);
+
+   фильтры из шапки и плит 
+  $$('[data-filter]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var f=a.dataset.filter;
+      $$('.pj').forEach(function(p){p.style.display=(p.dataset.cat===f)'''none';});
+      dr(false);
+    });
+  });
+
+   drag&drop обложек и логотипа 
+  var slot=$('#logoSlot'),limg=$('#logoImg');
+  function useLogo(u){if(!u)return;limg.src=u;slot.classList.add('has-logo');}
+  useLogo(limg.dataset.src);
+  $$('[data-drop]').forEach(function(zone){
+    ['dragenter','dragover'].forEach(function(ev){zone.addEventListener(ev,function(e){e.preventDefault();zone.classList.add('drag');});});
+    ['dragleave','drop'].forEach(function(ev){zone.addEventListener(ev,function(e){e.preventDefault();zone.classList.remove('drag');});});
+    zone.addEventListener('drop',function(e){
+      e.preventDefault();
+      var f=e.dataTransfer&&e.dataTransfer.files&&e.dataTransfer.files[0];
+      if(!f!^image.test(f.type))return;
+      var r=new FileReader();
+      r.onload=function(){
+        if(zone.dataset.drop==='logo'){useLogo(r.result);return;}
+        var sc=zone.querySelector('.sc');
+        if(sc)sc.innerHTML='img class=fill alt= src='+r.result+'';
+      };
+      r.readAsDataURL(f);
+    });
+  });
+  $('#hintX').addEventListener('click',function(){$('#hint').classList.add('gone');});
+  setTimeout(function(){var h=$('#hint');if(h)h.classList.add('gone');},20000);
+
+   форма 
+  var form=$('#form'),fok=$('#fok'),phone=$('#fPhone');
+  phone.addEventListener('input',function(){
+    var v=phone.value.replace(Dg,'');
+    if(v.charAt(0)==='8')v='7'+v.slice(1);
+    if(v.charAt(0)!=='7')v='7'+v;
+    v=v.slice(0,11);
+    var o='+7';
+    if(v.length1)o+=' ('+v.slice(1,4);
+    if(v.length=5)o+=') '+v.slice(4,7);
+    if(v.length=8)o+='-'+v.slice(7,9);
+    if(v.length=10)o+='-'+v.slice(9,11);
+    phone.value=o;
+  });
+  $$('#form input,#form select,#form textarea').forEach(function(el){
+    function sync(){el.parentNode.classList.toggle('filled',!!el.value);}
+    el.addEventListener('input',function(){sync();el.parentNode.classList.remove('err');});
+    el.addEventListener('change',sync);sync();
+  });
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var bad=false,nm=$('#fName'),tp=$('#fType'),ag=$('#fAgree');
+    if(nm.value.trim().length2){nm.parentNode.classList.add('err');bad=true;}
+    if(phone.value.replace(Dg,'').length11){phone.parentNode.classList.add('err');bad=true;}
+    if(!tp.value){tp.parentNode.classList.add('err');bad=true;}
+    if(!ag.checked)bad=true;
+    if(bad)return;
+    form.style.display='none';fok.classList.add('show');
+  });
+
+   якоря 
+  $$('a[href^=#]').forEach(function(a){
+    if(a.dataset.filtera.id==='tabServices'a.id==='footServices')return;
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href');
+      if(id.length2)return;
+      var t=document.querySelector(id);
+      if(!t)return;
+      e.preventDefault();dr(false);
+      window.scrollTo({topt.getBoundingClientRect().top+y0()-64,behavior'smooth'});
+    });
+  });
+
+   preloader 
+  var prg=0,pbar=$('#pb');
+  var pi=setInterval(function(){
+    prg+=Math.random()20+10;
+    if(prg=100){prg=100;clearInterval(pi);setTimeout(hidePre,250);}
+    pbar.style.transform='scaleX('+(prg100)+')';
+  },90);
+}
+
+try{
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){try{boot();}catch(e){hidePre();}});
+  else{try{boot();}catch(e){hidePre();}}
+}catch(e){hidePre();}
+})();
+script
+body
+html
